@@ -1,5 +1,11 @@
+import NavigationsBar from "./components/NavigationBar";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <NavigationsBar />
+    </>
+  );
 }
 
 export default App;
