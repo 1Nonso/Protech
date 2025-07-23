@@ -1,5 +1,6 @@
 import menuLogo from "../assets/Menu.svg";
 import closeMenuLogo from "../assets/CloseMenu.svg";
+import { HashLink as Link } from "react-router-hash-link";
 import { useMediaQuery } from "react-responsive";
 import { useState } from "react";
 
@@ -54,15 +55,25 @@ const Menu = ({ setMenuState }: MenuProps) => {
         }}
       />
       <div className="h-[50%] w-[90%] flex flex-col items-start justify-between">
-        <button className="text-4xl">home</button>
+        <Link to="#home" className="text-4xl">
+          home
+        </Link>
         <div className="h-0.25 w-full bg-white"></div>
-        <button className="text-4xl">about</button>
+        <Link to="#home" className="text-4xl">
+          about
+        </Link>
         <div className="h-0.25 w-full bg-white"></div>
-        <button className="text-4xl">work</button>
+        <Link to="#home" className="text-4xl">
+          work
+        </Link>
         <div className="h-0.25 w-full bg-white"></div>
-        <button className="text-4xl">services</button>
+        <Link to="#home" className="text-4xl">
+          services
+        </Link>
         <div className="h-0.25 w-full bg-white"></div>
-        <button className="text-4xl">contact</button>
+        <Link to="#home" className="text-4xl">
+          contact
+        </Link>
       </div>
     </div>
   );
