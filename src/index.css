@@ -2,7 +2,27 @@
 
 @font-face {
   font-family: DynaPuff;
-  src: url("./../src/assets/DynaPuff-Regular.ttf");
+  src: url("./../src/assets/fonts/DynaPuff-Regular.ttf");
+}
+
+@font-face {
+  font-family: GoogleSan;
+  src: url("./assets/fonts/GoogleSansCode-Regular.ttf");
+}
+
+@font-face {
+  font-family: meowscript;
+  src: url("./assets/fonts/MeowScript-Regular.ttf");
+}
+
+@font-face {
+  font-family: borel;
+  src: url("./assets/fonts/Borel-Regular.ttf");
+}
+
+@font-face {
+  font-family: roboto;
+  src: url("./assets/fonts/Roboto-Regular.ttf");
 }
 
 body {
