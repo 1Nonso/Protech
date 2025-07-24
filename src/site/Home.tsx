@@ -43,13 +43,13 @@ const Home = () => {
         <div className="relative min-h-fit mt-200 py-10 text-center flex flex-col md:flex-row-reverse items-center justify-evenly text-white w-dvw px-6 overflow-hidden">
           <motion.p
             className="font-bold text-3xl md:text-5xl w-[90%] md:w-[60%]"
-            initial={{ opacity: 0, y: -200 }}
+            initial={{ opacity: 0, y: -100 }}
             whileInView={{
               opacity: 1,
               y: 0,
               transition: {
-                delay: 3,
-                duration: 1.5,
+                delay: 0.7,
+                duration: 1,
                 ease: easeInOut,
               },
             }}
@@ -64,12 +64,12 @@ const Home = () => {
           <motion.div
             className="md:w-[30%] flex flex-col md:flex-col-reverse items-center"
             initial={{ opacity: 0, y: 100 }}
-            animate={{
+            whileInView={{
               opacity: 1,
               y: 0,
               transition: {
-                delay: 1.5,
-                duration: 1.5,
+                delay: 0.7,
+                duration: 1,
                 ease: easeInOut,
               },
             }}
@@ -89,7 +89,7 @@ const Home = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 2.3 }}
-          viewport={{ once: true, amount: 0.3 }}
+          viewport={{ amount: 0.3 }}
         >
           <div className="w-full md:w-[40%]">
             <h2 className="font-bold text-3xl mb-3">Our Approach</h2>
@@ -102,7 +102,6 @@ const Home = () => {
             className="space-y-4 text-lg md:text-xl text-left w-full md:w-[60%]"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true }}
             variants={{
               hidden: {},
               visible: {
