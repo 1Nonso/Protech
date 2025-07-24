@@ -44,11 +44,11 @@ const Home = () => {
           <motion.p
             className="font-bold text-3xl md:text-5xl w-[90%] md:w-[60%]"
             initial={{ opacity: 0, y: -200 }}
-            animate={{
+            whileInView={{
               opacity: 1,
               y: 0,
               transition: {
-                delay: 1.5,
+                delay: 3,
                 duration: 1.5,
                 ease: easeInOut,
               },
