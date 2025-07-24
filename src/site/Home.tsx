@@ -44,6 +44,7 @@ const Home = () => {
           <motion.p
             className="font-bold text-3xl md:text-5xl w-[90%] md:w-[60%]"
             initial={{ opacity: 0, y: -100 }}
+            viewport={{ once: true }}
             whileInView={{
               opacity: 1,
               y: 0,
@@ -64,6 +65,7 @@ const Home = () => {
           <motion.div
             className="md:w-[30%] flex flex-col md:flex-col-reverse items-center"
             initial={{ opacity: 0, y: 100 }}
+            viewport={{ once: true }}
             whileInView={{
               opacity: 1,
               y: 0,
@@ -89,7 +91,7 @@ const Home = () => {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 2.3 }}
-          viewport={{ amount: 0.3 }}
+          viewport={{ once: true, amount: 0.3 }}
         >
           <div className="w-full md:w-[40%]">
             <h2 className="font-bold text-3xl mb-3">Our Approach</h2>
@@ -102,6 +104,7 @@ const Home = () => {
             className="space-y-4 text-lg md:text-xl text-left w-full md:w-[60%]"
             initial="hidden"
             whileInView="visible"
+            viewport={{ once: true }}
             variants={{
               hidden: {},
               visible: {
