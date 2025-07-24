@@ -9,10 +9,11 @@ const About = () => {
     "Stay hungry",
     "Bring the vibe",
   ];
+
   return (
     <section id="about" className="w-dvw">
       <div className="bg-white text-[#0099FF] w-full pt-40 flex flex-col items-center overflow-hidden">
-        <h5 className="font-bold text-5xl mb-5 w-[95%] ">about us</h5>
+        <h5 className="font-bold text-5xl mb-10 w-[95%] ">about us</h5>
         <div className="w-full flex flex-col md:flex-row items-center justify-evenly">
           <motion.img
             initial={{ x: -250, opacity: 0 }}
@@ -55,7 +56,7 @@ const About = () => {
         </div>
       </div>
       <div className="bg-white text-[#0099FF] w-full pt-5 flex flex-col items-center  ">
-        <h5 className="font-bold text-3xl mt-40 mb-3 font-[borel] text-center w-[95%] ">
+        <h5 className="font-bold text-3xl mt-15 md:mt-40 mb-3 font-[borel] text-center w-[95%] ">
           our motto - powered by our values.
         </h5>
         <ol className=" text-xl mb-5 italic font-semibold flex flex-wrap items-center justify-evenly w-full">
@@ -67,6 +68,14 @@ const About = () => {
             );
           })}
         </ol>
+      </div>
+      <div className="bg-white">
+        <h5>meet the team</h5>
+        <hr />
+        <p>
+          We`re always on. Our global team works round the clock, helping you
+          stay ahead.
+        </p>
       </div>
     </section>
   );
