@@ -40,7 +40,7 @@ const Home = () => {
         </motion.p>
       </div>
       <div className="bg-gradient-to-b from-[#0099FF] from-40% to-[#ffff] to-55%">
-        <div className="relative min-h-fit mt-200 py-10 text-center flex flex-col md:flex-row-reverse items-center justify-evenly text-white w-dvw px-6 overflow-hidden">
+        <div className="relative min-h-fit mt-200 py-10 pt-30 text-center flex flex-col md:flex-row-reverse items-center justify-evenly text-white w-dvw px-6 overflow-hidden">
           <motion.p
             className="font-bold text-3xl md:text-5xl w-[90%] md:w-[60%]"
             initial={{ opacity: 0, y: -100 }}
@@ -87,7 +87,7 @@ const Home = () => {
           </motion.div>
         </div>
         <motion.div
-          className="text-[#0099FF] w-full flex flex-col md:flex-row gap-8 p-8 md:p-12"
+          className="text-[#0099FF] w-full flex flex-col md:flex-row gap-8 p-8 mt-40 md:p-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 2.3 }}
