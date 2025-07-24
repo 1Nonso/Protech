@@ -27,7 +27,7 @@ const fadeInUp = {
 const Home = () => {
   return (
     <section id="home" className="w-dvw">
-      <div className="bg-[url(src/assets/homePageBackground.png)] bg-origin-border bg-center bg-no-repeat bg-cover h-dvh w-dvw fixed top-0 -z-10">
+      <div className="homeBackgroundImage h-dvh w-dvw fixed top-0 -z-10">
         <motion.p
           className="absolute bottom-16 font-black text-white text-7xl text-center w-full"
           custom={0.5}
@@ -53,8 +53,6 @@ const Home = () => {
                 ease: easeInOut,
               },
             }}
-            // variants={fadeInUp}
-            // custom={1}
           >
             a global{" "}
             <span className="font-[borel] text-[#0099]">creative agency</span>{" "}
@@ -75,8 +73,6 @@ const Home = () => {
                 ease: easeInOut,
               },
             }}
-            // variants={fadeInUp}
-            // custom={0.4}
           >
             <img
               className="bg-white md:w-[35%] w-[45%] rounded-full py-7 md:py-5 my-10"

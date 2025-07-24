@@ -28,3 +28,13 @@
 body {
   font-family: DynaPuff;
 }
+
+.homeBackgroundImage {
+  background: url("../src/assets/homePageBackground.png");
+  background-color: #0099ff;
+  background-blend-mode: multiply;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-clip: border-box;
+}
