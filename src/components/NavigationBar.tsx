@@ -12,7 +12,7 @@ const NavigationsBar = () => {
   const isMobile = useMediaQuery({ maxWidth: 768 });
   return (
     <nav className="w-dvw h-fit flex items-center justify-center">
-      {isMobile ? <NavigationsBarMobile /> : null}
+      {isMobile ? <NavigationsBarMobile /> : <NavigationsBarDesktop />}
     </nav>
   );
 };
@@ -20,6 +20,63 @@ const NavigationsBar = () => {
 export default NavigationsBar;
 
 const NavigationsBarMobile = () => {
+  const [menuState, setMenuState] = useState(false);
+  const [showNav, setShowNav] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
+
+  const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+    const atTop = currentScrollY <= 0;
+    const atBottom =
+      window.innerHeight + currentScrollY >=
+      document.documentElement.scrollHeight - 5;
+
+    if (atTop || atBottom) {
+      setShowNav(true);
+    } else if (currentScrollY > lastScrollY) {
+      setShowNav(false);
+    } else {
+      setShowNav(true);
+    }
+
+    setLastScrollY(currentScrollY);
+  };
+
+  useEffect(() => {
+    const onScroll = () => requestAnimationFrame(handleScroll);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, [lastScrollY]);
+
+  return (
+    <>
+      <motion.section
+        initial={{ y: 0 }}
+        animate={{ y: showNav ? 0 : -100 }}
+        transition={{ duration: 0.7, ease: "easeInOut" }}
+        className="w-[90%] flex items-center justify-between pr-7.5 bg-white/50 backdrop-blur-xs border-2 border-white/40 shadow-lg fixed rounded-4xl top-2"
+      >
+        <div className="h-12.5 flex items-center">
+          <img src="/protech-Logo.svg" alt="Protech Logo" className="h-full" />
+          <p className="font-semibold text-2xl title">Protech</p>
+        </div>
+        <motion.img
+          src={menuLogo}
+          alt="Menu Icon"
+          className="w-8.5 cursor-pointer"
+          onClick={() => setMenuState(true)}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        />
+      </motion.section>
+      <AnimatePresence>
+        {menuState && <Menu setMenuState={setMenuState} />}
+      </AnimatePresence>
+    </>
+  );
+};
+
+const NavigationsBarDesktop = () => {
   const [menuState, setMenuState] = useState(false);
   const [showNav, setShowNav] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
@@ -109,7 +166,7 @@ const Menu = ({ setMenuState }: MenuProps) => {
       animate="open"
       exit="closed"
       variants={sidebarVariants}
-      className="fixed top-0 right-0 h-screen w-[80%] z-40 bg-[#0088FF] text-white p-6 flex flex-col items-center justify-center space-y-6"
+      className="fixed top-0 right-0 h-screen w-[80%] z-40 bg-[#0088FF] text-white p-6 flex flex-col items-center justify-center space-y-6 rounded-l-3xl"
     >
       <motion.img
         src={closeMenuLogo}
@@ -126,7 +183,7 @@ const Menu = ({ setMenuState }: MenuProps) => {
             className="w-full"
             initial={{ opacity: 0, x: 30 }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: id * 0.1 }}
+            transition={{ delay: id * 0.25 }}
           >
             <Link
               to={to}
