@@ -1,3 +1,4 @@
+import ScrollFadeSwap from "../components/scrollComponen";
 import sample from "./../assets/sample.png";
 import { motion } from "framer-motion";
 
@@ -8,6 +9,17 @@ const About = () => {
     "Sweat the details",
     "Stay hungry",
     "Bring the vibe",
+  ];
+  const team = [
+    {
+      name: "CHUKWUANI CHINONSO OTHNIEL",
+      role: "Software Engineer | Web development",
+      desc: "My name is Chukwuani Chinonso, a Frontend Developer with a strong foundation in React, TypeScript, and modern web technologies. I have hands-on experience building responsive, user-focused interfaces that combine technical precision with creative design. Through real-world projects, I've developed interactive UIs, dynamic dashboards, and seamless API integrations to enhance user experiences. My academic background in Computer Science, along with a consistent focus on writing clean, maintainable code, equips me to thrive in fast-paced development environments. I'm eager to contribute my energy, skills, and growth mindset to a forward-thinking team.",
+    },
+    { name: "JANE DOE", role: "Product Designer", desc: "..." },
+    { name: "JOHN SMITH", role: "Mobile Developer", desc: "..." },
+    { name: "EMMA WHITE", role: "Backend Developer", desc: "..." },
+    { name: "DAVID KING", role: "Data Analyst", desc: "..." },
   ];
 
   return (
@@ -76,6 +88,40 @@ const About = () => {
           We`re always on. Our global team works round the clock, helping you
           stay ahead.
         </p>
+        <ScrollFadeSwap>
+          {team.map((member, idx) => (
+            <div key={idx} className="text-center px-4 max-w-3xl">
+              <img
+                src=""
+                alt=""
+                className="w-24 h-24 mx-auto rounded-full bg-gray-300"
+              />
+              <h5 className="text-2xl font-bold mt-4">{member.name}</h5>
+              <p className="text-lg font-semibold italic">{member.role}</p>
+              <p className="mt-3 text-base">{member.desc}</p>
+            </div>
+          ))}
+        </ScrollFadeSwap>
+        <div>
+          <div>
+            <img src="" alt="" />
+            <h5>CHUKWUANI CHINONSO OTHNIEL</h5>
+            <p>Frontend Web-developer</p>
+          </div>
+          <p>
+            My name is Chukwuani Chinonso, a Frontend Developer with a strong
+            foundation in React, TypeScript, and modern web technologies. I have
+            hands-on experience building responsive, user-focused interfaces
+            that combine technical precision with creative design. Through
+            real-world projects, I've developed interactive UIs, dynamic
+            dashboards, and seamless API integrations to enhance user
+            experiences. My academic background in Computer Science, along with
+            a consistent focus on writing clean, maintainable code, equips me to
+            thrive in fast-paced development environments. I`m eager to
+            contribute my energy, skills, and growth mindset to a
+            forward-thinking team.
+          </p>
+        </div>
       </div>
     </section>
   );
