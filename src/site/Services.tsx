@@ -1,7 +1,5 @@
 const Services = () => {
-  return (
-    <section id="services" className="h-200">This Section contains all our services</section>
-  );
+  return <section id="services" className=""></section>;
 };
 
 export default Services;

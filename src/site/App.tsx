@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import Home from "./Home";
 import Services from "./Services";
 import Work from "./Work";
+import { WhatsappLink } from "../components/whatsapp";
 
 function App() {
   useEffect(() => {
@@ -27,6 +28,7 @@ function App() {
   return (
     <>
       <NavigationsBar />
+      <WhatsappLink />
 
       <main>
         <Home />
