@@ -50,8 +50,14 @@ const About = () => {
 
   return (
     <section id="about" className="w-dvw">
-      <div className="bg-white text-[#0099FF] w-full pt-40 flex flex-col items-center overflow-hidden">
-        <h5 className="font-bold text-5xl mb-10 w-[95%] ">about us</h5>
+      <div className="bg-white  w-full pt-40 flex flex-col items-center overflow-hidden relative">
+        {/* <h5 className="font-bold text-5xl mb-10 w-[95%] ">about us</h5> */}
+        <div className="bg-linear-to-r from-[#0099FF] to-[#0101bf] bg-clip-text w-fit absolute top-0 left-6 ">
+          <h5 className="font-bold text-5xl my-10 text-transparent  ">
+            about us
+          </h5>
+          {/* to-[#0101bf], from-[#ACB6E5] to-[#86FDE8] */}
+        </div>
         <div className="w-full flex flex-col md:flex-row items-center justify-evenly">
           <motion.img
             initial={{ x: -250, opacity: 0 }}
@@ -75,7 +81,7 @@ const About = () => {
                 ProTech is a future-driven tech collective, built to shape how
                 businesses connect, grow, and protect in the digital age.
               </span>
-              <span className="block text-center text-xl my-5 font-[borel] italic ">
+              <span className="block text-center text-xl my-5 font-[borel] italic text-[#0101bf] ">
                 creativity?, no bounds
               </span>
               We craft sleek, intuitive websites and mobile apps tailored to the
@@ -84,7 +90,7 @@ const About = () => {
               and make smarter moves. And in a world full of digital threats,
               we`ve made cybersecurity part of the blueprint — not an
               afterthought.
-              <span className="block text-center text-xl my-5 font-[borel] italic">
+              <span className="block text-center text-xl my-5 font-[borel] italic text-[#0101bf] ">
                 Our client, always in the spotlight
               </span>
               ProTech was born to solve real-world problems with bold,
@@ -96,8 +102,8 @@ const About = () => {
           </AnimatePresence>
         </div>
       </div>
-      <div className="bg-white text-[#0099FF] w-full pt-5 flex flex-col items-center  ">
-        <h5 className="font-bold text-3xl mt-15 md:mt-40 mb-3 font-[borel] text-center w-[95%] ">
+      <div className="bg-white w-full pt-5 flex flex-col items-center  ">
+        <h5 className="font-bold text-2xl mt-15 md:mt-40 mb-3 font-[borel] text-center text-[#0101bf] w-[95%] ">
           our motto - powered by our values.
         </h5>
         <ol className=" text-xl mb-5 italic font-semibold flex flex-wrap items-center justify-evenly w-full">
@@ -116,7 +122,6 @@ const About = () => {
             <h5 className="font-bold text-xl pt-10 text-center text-transparent  ">
               meet the team
             </h5>
-            {/* to-[#0101bf], from-[#ACB6E5] to-[#86FDE8] */}
           </div>
           <hr className="bg-[#0101bf] " />
           <p className="mt-5 text-2xl text-center font-[borel] font-semibold ">
@@ -129,7 +134,7 @@ const About = () => {
           {team.map((member, idx) => (
             <div
               key={idx}
-              className="w-dvw text-center flex flex-col md:flex-row justify-evenly px-4 text-[#0099FF] "
+              className="w-dvw text-center flex flex-col md:flex-row justify-evenly px-4 "
             >
               <div className="w-full md:w-[40%] flex flex-col items-center ">
                 <img
@@ -146,7 +151,7 @@ const About = () => {
                   </p>
                 </div>
               </div>
-              <p className="mt-2 text-base md:text-right w-full text-[#0099FF] md:w-[50%] ">
+              <p className="mt-2 text-base md:text-right w-full md:w-[50%] ">
                 {member.desc}
               </p>
             </div>
