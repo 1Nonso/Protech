@@ -13,8 +13,8 @@ const About = () => {
   const team = [
     {
       name: "CHUKWUANI CHINONSO OTHNIEL",
-      role: "Software Engineer | Web development",
-      desc: "My name is Chukwuani Chinonso, a Frontend Developer with a strong foundation in React, TypeScript, and modern web technologies. I have hands-on experience building responsive, user-focused interfaces that combine technical precision with creative design. Through real-world projects, I've developed interactive UIs, dynamic dashboards, and seamless API integrations to enhance user experiences. My academic background in Computer Science, along with a consistent focus on writing clean, maintainable code, equips me to thrive in fast-paced development environments. I'm eager to contribute my energy, skills, and growth mindset to a forward-thinking team.",
+      role: "Software Engineer | Web Development",
+      desc: "I'm a Web Developer with a strong foundation in React, TypeScript, and modern web technologies. I have hands-on experience building responsive, user-focused interfaces that combine technical precision with creative design. Through real-world projects, I've developed interactive UIs, dynamic dashboards, and seamless API integrations to enhance user experiences. My academic background in Computer Science, along with a consistent focus on writing clean, maintainable code, equips me to thrive in fast-paced development environments. I'm eager to contribute my energy, skills, and growth mindset to a forward-thinking team.",
     },
     { name: "JANE DOE", role: "Product Designer", desc: "..." },
     { name: "JOHN SMITH", role: "Mobile Developer", desc: "..." },
@@ -102,26 +102,6 @@ const About = () => {
             </div>
           ))}
         </ScrollFadeSwap>
-        <div>
-          <div>
-            <img src="" alt="" />
-            <h5>CHUKWUANI CHINONSO OTHNIEL</h5>
-            <p>Frontend Web-developer</p>
-          </div>
-          <p>
-            My name is Chukwuani Chinonso, a Frontend Developer with a strong
-            foundation in React, TypeScript, and modern web technologies. I have
-            hands-on experience building responsive, user-focused interfaces
-            that combine technical precision with creative design. Through
-            real-world projects, I've developed interactive UIs, dynamic
-            dashboards, and seamless API integrations to enhance user
-            experiences. My academic background in Computer Science, along with
-            a consistent focus on writing clean, maintainable code, equips me to
-            thrive in fast-paced development environments. I`m eager to
-            contribute my energy, skills, and growth mindset to a
-            forward-thinking team.
-          </p>
-        </div>
       </div>
     </section>
   );
