@@ -120,16 +120,17 @@ const Home = () => {
             }}
           >
             {approachItems.map((item, idx) => (
-              <motion.li
-                key={idx}
-                className="relative"
-                variants={fadeInUp}
-                custom={0.2 * idx}
-              >
-                {idx + 1} {". "}
-                {item}
+              <div key={idx} className="relative">
+                <motion.li
+                  whileHover={{ x: 100 }}
+                  variants={fadeInUp}
+                  custom={0.2 * idx}
+                >
+                  {idx + 1} {". "}
+                  {item}
+                </motion.li>
                 <hr className="border-t border-[#0099FF] mt-3" />
-              </motion.li>
+              </div>
             ))}
           </motion.ol>
         </motion.div>
