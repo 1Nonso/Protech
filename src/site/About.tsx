@@ -110,23 +110,26 @@ const About = () => {
           })}
         </ol>
       </div>
-      <div className="bg-white w-full px-5">
-        <div className="bg-linear-to-r from-[#0099FF] to-[#0101bf] bg-clip-text w-fit ">
-          <h5 className="font-bold text-xl pt-10 text-center text-transparent ">
-            meet the team
-          </h5>
-          {/* to-[#0101bf], from-[#ACB6E5] to-[#86FDE8] */}
+      <div className="bg-white w-full px-5 relative">
+        <div className=" ">
+          <div className="bg-linear-to-r from-[#0099FF] to-[#0101bf] bg-clip-text w-fit ">
+            <h5 className="font-bold text-xl pt-10 text-center text-transparent  ">
+              meet the team
+            </h5>
+            {/* to-[#0101bf], from-[#ACB6E5] to-[#86FDE8] */}
+          </div>
+          <hr className="bg-[#0101bf] " />
+          <p className="mt-5 text-2xl text-center font-[borel] font-semibold ">
+            From designers to developers, our team brings diverse expertise and
+            shared energy to every project. Together, we build with purpose —
+            and keep the momentum going.
+          </p>
         </div>
-        <hr className="bg-[#0101bf] " />
-        <p className="mt-5 text-2xl font-[borel] text-[#0099FF] font-semibold ">
-          we`re always on. our global team works round the clock, helping you
-          stay ahead.
-        </p>
         <ScrollFadeSwap>
           {team.map((member, idx) => (
             <div
               key={idx}
-              className="w-dvw text-center flex flex-col md:flex-row justify-evenly px-4 max-w-3xl text-[#0099FF] "
+              className="w-dvw text-center flex flex-col md:flex-row justify-evenly px-4 text-[#0099FF] "
             >
               <div className="w-full md:w-[40%] flex flex-col items-center ">
                 <img
@@ -143,12 +146,16 @@ const About = () => {
                   </p>
                 </div>
               </div>
-              <p className="mt-2 text-base md:text-right w-full text-[#0099FF] md:w-[60%] ">
+              <p className="mt-2 text-base md:text-right w-full text-[#0099FF] md:w-[50%] ">
                 {member.desc}
               </p>
             </div>
           ))}
         </ScrollFadeSwap>
+        <p className="mt-5 text-2xl text-center font-[borel] font-semibold relative bottom-50 ">
+          we`re always on. our global team works round the clock, helping you
+          stay ahead.
+        </p>
       </div>
     </section>
   );
