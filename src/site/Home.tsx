@@ -87,14 +87,19 @@ const Home = () => {
           </motion.div>
         </div>
         <motion.div
-          className="text-[#0099FF] w-full flex flex-col md:flex-row gap-8 p-8 mt-40 md:p-12"
+          className=" w-full flex flex-col md:flex-row gap-8 p-8 mt-40 md:p-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 2.3 }}
           viewport={{ once: true, amount: 0.3 }}
         >
           <div className="w-full md:w-[40%]">
-            <h2 className="font-bold text-3xl mb-3">Our Approach</h2>
+            <div className="bg-linear-to-r from-[#0099FF] to-[#0101bf] bg-clip-text w-fit mb-5 ">
+              <h5 className="font-bold text-3xl pt-10 text-center text-transparent  ">
+                Our Approach
+              </h5>
+              {/* to-[#0101bf], from-[#ACB6E5] to-[#86FDE8] */}
+            </div>
             <p className="text-lg text-left max-w-xl">
               We won`t bore you with the details — we`ll just get it done. Fast,
               seamless, no drama.
