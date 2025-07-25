@@ -50,9 +50,9 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="w-dvw aboutBackgroundImage px-4 py-10 text-white "
+      className="w-dvw aboutBackgroundImage py-10 text-white flex flex-col items-center "
     >
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-6">
+      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-6 w-[95%] ">
         <p className="text-center text-lg font-medium">
           Shaping what&apos;s next — from web design to development and beyond.
         </p>
@@ -62,9 +62,7 @@ const Services = () => {
           className="w-15 md:w-15"
         />
       </div>
-
-      <hr className="mt-2" />
-
+      <hr className="mt-2 w-[95%] " />
       <div className="bg-linear-to-r from-[#0099FF] to-[#0101bf] bg-clip-text w-full ">
         <h5 className="font-bold text-4xl pt-10 text-center text-transparent  ">
           what we deliver
@@ -74,8 +72,8 @@ const Services = () => {
         const { id, title, des, lists, img } = service;
         return (
           <SlideSection key={id}>
-            <div className="flex flex-col md:flex-row items-center justify-between gap-6 my-14 font-[roboto] ">
-              <div className="md:w-1/2">
+            <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 my-14 w-[97%] font-[roboto] relative left-2 ">
+              <div className="md:w-1/2 ">
                 <div className="bg-linear-to-r from-[#0099FF] to-[#0101bf] bg-clip-text w-full ">
                   <h5 className="text-3xl font-bold mb-3 text-transparent font-[dynapuff] ">
                     {title}
