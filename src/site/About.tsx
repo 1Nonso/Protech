@@ -1,6 +1,11 @@
 import ScrollFadeSwap from "../components/scrollComponen";
 import sample from "./../assets/images/sample.png";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
+import photoOfDesignerCybersecurity from "./../assets/images/echebiri.png";
+import photoOfAiEngineer from "./../assets/images/godswill.png";
+import photoOfBackendDeveloper from "./../assets/images/chisom.png";
+import photoOfFrontendDeveloper from "./../assets/images/othniel.jpg";
+import photoOfDesigner from "./../assets/images/nicole.jpeg";
 
 const About = () => {
   const motto = [
@@ -15,11 +20,32 @@ const About = () => {
       name: "CHUKWUANI CHINONSO OTHNIEL",
       role: "Software Engineer | Web Development",
       desc: "I'm a Web Developer with a strong foundation in React, TypeScript, and modern web technologies. I have hands-on experience building responsive, user-focused interfaces that combine technical precision with creative design. Through real-world projects, I've developed interactive UIs, dynamic dashboards, and seamless API integrations to enhance user experiences. My academic background in Computer Science, along with a consistent focus on writing clean, maintainable code, equips me to thrive in fast-paced development environments. I'm eager to contribute my energy, skills, and growth mindset to a forward-thinking team.",
+      img: photoOfFrontendDeveloper,
     },
-    { name: "JANE DOE", role: "Product Designer", desc: "..." },
-    { name: "JOHN SMITH", role: "Mobile Developer", desc: "..." },
-    { name: "EMMA WHITE", role: "Backend Developer", desc: "..." },
-    { name: "DAVID KING", role: "Data Analyst", desc: "..." },
+    {
+      name: "ECHEBIRI MUNACHIMSO",
+      role: "UI/UX Designer | Ethical Hacker ",
+      desc: "Hi, I'm Muna, a UI/UX Designer and Ethical Hacker passionate about crafting secure and user-centric digital experiences. I leverage Figma to design intuitive website and web app templates that prioritize both aesthetics and functionality. With a keen eye for detail, I infuse personality into my designs through thoughtful animations and seamless interactions. By combining my expertise in UI/UX I create amazing designs to fit to the client's choice and with ethical hacking principles and tools I'm able to detect vulnerability and threats in every web app or mobile app I create, which will ensure their security. I create digital solutions that are not only visually stunning but also secure and user-friendly.",
+      img: photoOfDesignerCybersecurity,
+    },
+    {
+      name: "NWANEBUIKE CHISOM D.",
+      role: "Backend Web-Developer",
+      desc: "...",
+      img: photoOfBackendDeveloper,
+    },
+    {
+      name: "UZOECHINA GODSWILL",
+      role: "AI/ML Engineer",
+      desc: "...",
+      img: photoOfAiEngineer,
+    },
+    {
+      name: "Nicole Ogbonnaya",
+      role: "UI/UX Designer",
+      desc: "Hi, I`m Nicole — a UI/UX Designer who effortlessly brings ideas to life through clean, creative, and user-friendly designs. Using the software Figma, I design unique website and web app templates, always considering the user experience. I enjoy adding a bit of personality to every project through thoughtful animations and smooth interactions that make the design feel alive. Whether it`s sketching out wireframes or building high-fidelity prototypes, I`m all about creating digital experiences that are not just beautiful, but actually make sense to the people using them. I`m always learning, always creating, and always excited to design something that stands out and solves real problems.",
+      img: photoOfDesigner,
+    },
   ];
 
   return (
@@ -36,35 +62,38 @@ const About = () => {
             alt="image of a worker"
             className="w-[80%] md:w-[30%] rounded-lg mb-5"
           />
-          <motion.p
-            className="text-lg text w-[90%] md:w-[50%] font-[roboto] font-semibold text-left "
-            initial={{ opacity: 0 }}
-            viewport={{ once: true }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1, delay: 0.7 }}
-          >
-            <span className="font-bold text-xl">
-              ProTech is a future-driven tech collective, built to shape how
-              businesses connect, grow, and protect in the digital age.
-            </span>
-            <span className="block text-center text-xl my-5 font-[borel] italic ">
-              creativity?, no bounds
-            </span>
-            We craft sleek, intuitive websites and mobile apps tailored to the
-            pulse of modern business. But we don`t stop at launch — our data
-            analysis services help companies uncover patterns, predict trends,
-            and make smarter moves. And in a world full of digital threats,
-            we`ve made cybersecurity part of the blueprint — not an
-            afterthought.
-            <span className="block text-center text-xl my-5 font-[borel] italic">
-              Our client, always in the spotlight
-            </span>
-            ProTech was born to solve real-world problems with bold,
-            custom-built solutions. From UX design to backend architecture, our
-            team blends design thinking, technical mastery, and a deep respect
-            for digital trust. Wherever your business is headed, we`re already
-            building the road to get there.{" "}
-          </motion.p>
+          <AnimatePresence>
+            <motion.p
+              className="text-lg text w-[90%] md:w-[50%] font-[roboto] font-semibold text-left "
+              initial={{ opacity: 0 }}
+              viewport={{ once: true }}
+              whileInView={{ opacity: 1 }}
+              exit={{ opacity: 0, x: -200 }}
+              transition={{ duration: 1, delay: 0.7 }}
+            >
+              <span className="font-bold text-xl">
+                ProTech is a future-driven tech collective, built to shape how
+                businesses connect, grow, and protect in the digital age.
+              </span>
+              <span className="block text-center text-xl my-5 font-[borel] italic ">
+                creativity?, no bounds
+              </span>
+              We craft sleek, intuitive websites and mobile apps tailored to the
+              pulse of modern business. But we don`t stop at launch — our data
+              analysis services help companies uncover patterns, predict trends,
+              and make smarter moves. And in a world full of digital threats,
+              we`ve made cybersecurity part of the blueprint — not an
+              afterthought.
+              <span className="block text-center text-xl my-5 font-[borel] italic">
+                Our client, always in the spotlight
+              </span>
+              ProTech was born to solve real-world problems with bold,
+              custom-built solutions. From UX design to backend architecture,
+              our team blends design thinking, technical mastery, and a deep
+              respect for digital trust. Wherever your business is headed, we`re
+              already building the road to get there.{" "}
+            </motion.p>
+          </AnimatePresence>
         </div>
       </div>
       <div className="bg-white text-[#0099FF] w-full pt-5 flex flex-col items-center  ">
@@ -81,24 +110,42 @@ const About = () => {
           })}
         </ol>
       </div>
-      <div className="bg-white">
-        <h5>meet the team</h5>
-        <hr />
-        <p>
-          We`re always on. Our global team works round the clock, helping you
+      <div className="bg-white w-full px-5">
+        <div className="bg-linear-to-r from-[#0099FF] to-[#0101bf] bg-clip-text w-fit ">
+          <h5 className="font-bold text-xl pt-10 text-center text-transparent ">
+            meet the team
+          </h5>
+          {/* to-[#0101bf], from-[#ACB6E5] to-[#86FDE8] */}
+        </div>
+        <hr className="bg-[#0101bf] " />
+        <p className="mt-5 text-2xl font-[borel] text-[#0099FF] font-semibold ">
+          we`re always on. our global team works round the clock, helping you
           stay ahead.
         </p>
         <ScrollFadeSwap>
           {team.map((member, idx) => (
-            <div key={idx} className="text-center px-4 max-w-3xl">
-              <img
-                src=""
-                alt=""
-                className="w-24 h-24 mx-auto rounded-full bg-gray-300"
-              />
-              <h5 className="text-2xl font-bold mt-4">{member.name}</h5>
-              <p className="text-lg font-semibold italic">{member.role}</p>
-              <p className="mt-3 text-base">{member.desc}</p>
+            <div
+              key={idx}
+              className="w-dvw text-center flex flex-col md:flex-row justify-evenly px-4 max-w-3xl text-[#0099FF] "
+            >
+              <div className="w-full md:w-[40%] flex flex-col items-center ">
+                <img
+                  src={member.img}
+                  alt=""
+                  className="w-30 md:w-60 md:h-60 h-30 mx-auto rounded-full md:rounded-lg bg-gray-300"
+                />
+                <h5 className="text-2xl font-bold mt-4 text-[#0101bf] ">
+                  {member.name}
+                </h5>
+                <div className="bg-linear-to-r from-[#0099FF] to-[#0101bf] bg-clip-text w-fit ">
+                  <p className="text-sm font-semibold italic font-[borel] my-2 text-transparent ">
+                    {member.role}
+                  </p>
+                </div>
+              </div>
+              <p className="mt-2 text-base md:text-right w-full text-[#0099FF] md:w-[60%] ">
+                {member.desc}
+              </p>
             </div>
           ))}
         </ScrollFadeSwap>
