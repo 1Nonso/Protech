@@ -111,7 +111,7 @@ const About = () => {
         </ol>
       </div>
       <div className="bg-white w-full px-5 relative">
-        <div className=" ">
+        <div className="">
           <div className="bg-linear-to-r from-[#0099FF] to-[#0101bf] bg-clip-text w-fit ">
             <h5 className="font-bold text-xl pt-10 text-center text-transparent  ">
               meet the team
@@ -152,7 +152,7 @@ const About = () => {
             </div>
           ))}
         </ScrollFadeSwap>
-        <p className="mt-5 text-2xl text-center font-[borel] font-semibold relative bottom-50 ">
+        <p className="mt-5 text-2xl text-center font-[borel] font-semibold relative bottom-10 md:bottom-30 ">
           we`re always on. our global team works round the clock, helping you
           stay ahead.
         </p>
