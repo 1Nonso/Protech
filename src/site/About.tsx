@@ -1,5 +1,5 @@
 import ScrollFadeSwap from "../components/scrollComponen";
-import sample from "./../assets/sample.png";
+import sample from "./../assets/images/sample.png";
 import { motion } from "framer-motion";
 
 const About = () => {

@@ -11,8 +11,9 @@ import Work from "./Work";
 function App() {
   useEffect(() => {
     const lenis = new Lenis({
-      duration: 2.5,
+      duration: 4.5,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      wheelMultiplier: 0.5,
     });
 
     function raf(time: number) {
