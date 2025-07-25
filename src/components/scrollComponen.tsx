@@ -14,7 +14,7 @@ const ScrollFadeSwap = ({ children }: Props) => {
   const step = 1 / children.length;
 
   return (
-    <div ref={containerRef} className="relative h-[500vh] w-full">
+    <div ref={containerRef} className="relative h-[400vh] w-full">
       <div className="sticky top-0 h-screen w-full flex items-center justify-center bg-white">
         {children.map((child, idx) => {
           const start = step * idx;
