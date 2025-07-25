@@ -31,8 +31,8 @@ function App() {
       <main>
         <Home />
         <About />
-        <Work />
         <Services />
+        <Work />
         <Contact />
       </main>
     </>

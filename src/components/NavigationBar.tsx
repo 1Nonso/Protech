@@ -95,8 +95,8 @@ const Menu = ({ setMenuState }: MenuProps) => {
   const links = [
     { id: 1, name: "Home", to: "#home" },
     { id: 2, name: "About", to: "#about" },
-    { id: 3, name: "Work", to: "#work" },
-    { id: 4, name: "Services", to: "#services" },
+    { id: 3, name: "Services", to: "#services" },
+    { id: 4, name: "Work", to: "#work" },
     { id: 5, name: "Contact", to: "#contact" },
   ];
 
