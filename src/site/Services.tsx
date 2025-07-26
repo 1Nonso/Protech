@@ -112,7 +112,7 @@ const Services = () => {
         );
       })}
       <div className="w-dvw flex items-center justify-center mt-40">
-        <p className="font-[borel] text-2xl ">
+        <p className="font-[borel] text-2xl text-center ">
           we build websites that work overtime so you don't have time.
         </p>
       </div>
