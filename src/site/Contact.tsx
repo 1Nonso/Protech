@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="flex flex-col items-center justify-center md:justify-evenly bg-[#000b22] w-full pt-50 "
+      className="flex flex-col items-center justify-center md:justify-evenly bg-[#000b22] w-full pt-10 md:pt-40 "
     >
       <div className="flex items-center justify-evenly w-full">
         <div className="md:w-[50%] flex flex-col items-center justify-center ">
@@ -47,7 +47,7 @@ const Contact = () => {
           />
         )}
       </div>
-      <p className="text-white my-25 font-[borel] text-3xl ">
+      <p className="text-white my-25 font-[borel] text-3xl text-center ">
         Protech. Bringing bold ideas to life
       </p>
     </section>
