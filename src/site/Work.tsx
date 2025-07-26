@@ -93,9 +93,9 @@ const Work = () => {
                 <img
                   src={img}
                   alt={title}
-                  className="w-[90%] h-70 rounded-lg "
+                  className="w-[90%] md:w-[70%] h-70 rounded-lg mb-5 "
                 />
-                <div className="w-[95%] flex flex-col items-center justify-center my-2">
+                <div className="w-[95%] md:w-[80%] flex flex-col items-center justify-center my-2">
                   <div className="flex justify-between items-center w-[90%] ">
                     <h5 className="text-2xl">{title}</h5>
                     <p>{field}</p>
