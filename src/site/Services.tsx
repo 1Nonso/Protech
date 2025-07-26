@@ -103,10 +103,10 @@ const Services = () => {
       <SlideSection>{slideChildren}</SlideSection>
       <motion.p
         className="font-[borel] text-2xl text-center w-full relative bottom-40 text-white z-50"
-        initial={{ opacity: 0, y: 20 }}
+        initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false, amount: 0.3 }}
-        transition={{ duration: 0.8 }}
+        transition={{ duration: 1.2 }}
       >
         We build websites that work overtime so you don't have to.
       </motion.p>
