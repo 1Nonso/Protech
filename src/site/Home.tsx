@@ -27,7 +27,7 @@ const fadeInUp = {
 const Home = () => {
   return (
     <section id="home" className="w-dvw">
-      <div className="homeBackgroundImage h-dvh w-dvw fixed top-0 -z-10">
+      <div className="backgroundImage1 h-dvh w-dvw fixed top-0 -z-10">
         <motion.p
           className="absolute bottom-16 font-black text-white text-7xl text-center w-full"
           custom={0.5}
