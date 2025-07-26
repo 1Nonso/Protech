@@ -3,7 +3,7 @@ import brandImage from "./../assets/images/designImage.webp";
 import designImage from "./../assets/images/brandImage.webp";
 import webImage from "./../assets/images/webImage.webp";
 import { SlideSection } from "../components/scrollComponents";
-import { motion } from "framer-motion";
+import { easeInOut, motion } from "framer-motion";
 
 const Services = () => {
   const services = [
@@ -89,10 +89,12 @@ const Services = () => {
             Shaping what&apos;s next — from web design to development and
             beyond.
           </p>
-          <img
+          <motion.img
             src={servicesImage}
             alt="drawing of a computer"
-            className="w-20 md:w-15"
+            className="w-20 md:w-15 relative right-12.5"
+            animate={{ x: [0, 50, 0] }}
+            transition={{ repeat: Infinity, duration: 2, ease: easeInOut }}
           />
         </div>
         <hr className="max-w-5xl border-blue-700 w-[97.5%] " />
