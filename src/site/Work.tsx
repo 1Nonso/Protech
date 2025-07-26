@@ -57,7 +57,7 @@ const Work = () => {
   return (
     <section
       id="work"
-      className="w-dvw py-10 text-white flex flex-col items-center bg-[#000b22] "
+      className="w-dvw py-10 text-white flex flex-col items-center bg-[#000b22] overflow-hidden "
     >
       <div className="w-full flex items-center justify-end mr-5 ">
         <motion.img
