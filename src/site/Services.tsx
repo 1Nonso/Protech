@@ -23,7 +23,7 @@ const Services = () => {
     {
       id: 2,
       title: "Design",
-      des: " Good design gets noticed. Great design gets remembered. We create visuals that make your audience stop, think, and act.",
+      des: "Good design gets noticed. Great design gets remembered. We create visuals that make your audience stop, think, and act.",
       lists: [
         "Pitch Deck Design",
         "Advertising Mocks",
@@ -47,75 +47,69 @@ const Services = () => {
       img: webImage,
     },
   ];
-  return (
-    <section
-      id="services"
-      className="w-dvw backgroundImage2 py-10 text-white flex flex-col items-center "
-    >
-      <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-6 w-[95%] ">
-        <p className="text-center text-lg font-medium">
-          Shaping what&apos;s next — from web design to development and beyond.
-        </p>
+
+  const slideChildren: React.ReactNode[] = [];
+
+  services.forEach(({ title, des, lists, img }) => {
+    slideChildren.push(
+      <div key={`${title}-text`} className="space-y-4">
+        <h5 className="text-3xl font-bold mb-4 text-transparent bg-gradient-to-r from-[#0099FF] to-[#0101bf] bg-clip-text font-[dynapuff]">
+          {title}
+        </h5>
+        <p className="text-lg mb-5 leading-relaxed">{des}</p>
+        <ul className="list-disc list-inside space-y-2">
+          {lists.map((item, i) => (
+            <li
+              key={i}
+              className="font-[dynapuff] text-base hover:translate-x-2 transition-transform cursor-pointer"
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+      </div>
+    );
+
+    slideChildren.push(
+      <div key={`${title}-image`} className="flex justify-center items-center">
         <img
-          src={servicesImage}
-          alt="drawing of a computer"
-          className="w-15 md:w-15"
+          src={img}
+          alt={title}
+          className="w-full max-w-md rounded-lg object-cover"
         />
       </div>
-      <hr className="mt-2 w-[95%] " />
-      <div className="bg-linear-to-r from-[#0099FF] to-[#0101bf] bg-clip-text w-full ">
-        <h5 className="font-bold text-4xl pt-10 text-center text-transparent  ">
+    );
+  });
+
+  return (
+    <section id="services" className="w-full bg-[#000b22]">
+      <div className="flex flex-col items-center justify-center w-full">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 w-full max-w-6xl px-4 my-3">
+          <p className="text-center text-lg font-medium text-white">
+            Shaping what&apos;s next — from web design to development and
+            beyond.
+          </p>
+          <img
+            src={servicesImage}
+            alt="drawing of a computer"
+            className="w-20 md:w-15"
+          />
+        </div>
+        <hr className="max-w-5xl border-blue-700 w-[97.5%] " />
+        <h5 className="text-4xl font-bold mt-10 bg-gradient-to-r from-[#0099FF] to-[#0101bf] bg-clip-text text-transparent text-center">
           what we deliver
         </h5>
       </div>
-      {services.map((service) => {
-        const { id, title, des, lists, img } = service;
-        return (
-          <SlideSection key={id}>
-            <div className="flex flex-col md:flex-row items-center justify-center md:justify-between gap-6 my-14 w-[97%] font-[roboto] relative left-2 ">
-              <div className="md:w-1/2 ">
-                <div className="bg-linear-to-r from-[#0099FF] to-[#0101bf] bg-clip-text w-full ">
-                  <h5 className="text-3xl font-bold mb-3 text-transparent font-[dynapuff] ">
-                    {title}
-                  </h5>
-                </div>
-                <p className="mb-5 text-xl">{des}</p>
-                <hr className="text-[#0101bf] " />
-                <motion.ul className="list-disc list-inside space-y-1">
-                  {lists.map((item, i) => {
-                    return (
-                      <div key={i}>
-                        <motion.li
-                          initial={{ x: 0 }}
-                          whileHover={{ x: 100 }}
-                          transition={{ duration: 1 }}
-                          className="pt-3 font-[dynapuff] text-lg"
-                        >
-                          {item}
-                        </motion.li>
-                        <hr className="my-4 text-[#0101bf] " />
-                      </div>
-                    );
-                  })}
-                </motion.ul>
-              </div>
-              <motion.img
-                src={img}
-                alt=""
-                className="w-full md:w-2/4"
-                initial={{ opacity: 0, x: 80 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 1 }}
-              />
-            </div>
-          </SlideSection>
-        );
-      })}
-      <div className="w-dvw flex items-center justify-center mt-40">
-        <p className="font-[borel] text-2xl text-center ">
-          we build websites that work overtime so you don't have time.
-        </p>
-      </div>
+      <SlideSection>{slideChildren}</SlideSection>
+      <motion.p
+        className="font-[borel] text-2xl text-center w-full relative bottom-40 text-white z-50"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ duration: 0.8 }}
+      >
+        We build websites that work overtime so you don't have to.
+      </motion.p>
     </section>
   );
 };
