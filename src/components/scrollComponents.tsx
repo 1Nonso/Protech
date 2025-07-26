@@ -138,7 +138,7 @@ export const SlideSection = ({ children }: Props) => {
   );
 };
 
-export const SlideSectionWork = ({ children }: Props) => {
+export const SlideSectionWork = ({ children }: any) => {
   const ref = useRef(null);
   const inView = useInView(ref, { once: false, margin: "-20% 0px" });
   const controls = useAnimation();

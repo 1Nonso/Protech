@@ -5,6 +5,8 @@ import chopWiselyImage from "./../assets/images/foodWeb.png";
 import beFitImage from "./../assets/images/physicalFitness.png";
 import pixelsmintsImage from "./../assets/images/pixelsmintsImage.png";
 import workSectionImage from "./../assets/images/workSectionImage.webp";
+import { SlideSectionWork } from "../components/scrollComponents";
+import { motion } from "framer-motion";
 
 const Work = () => {
   const works = [
@@ -58,10 +60,12 @@ const Work = () => {
       className="w-dvw py-10 text-white flex flex-col items-center bg-[#000b22] "
     >
       <div className="w-full flex items-center justify-end mr-5 ">
-        <img
+        <motion.img
           src={workSectionImage}
           alt="work section image"
-          className="w-15 my-3 right-0"
+          className="w-15 my-3 relative right-12"
+          animate={{ x: [0, 50, 0] }}
+          transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
         />
       </div>
       <hr className="text-white h-2 z-50 w-full" />
@@ -75,35 +79,43 @@ const Work = () => {
           customers and deliver results worth celebrating.
         </p>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center w-full ">
+      <div className="grid grid-cols-1 md:grid-cols-2 items-center justify-center w-full pb-20 ">
         {works.map((work) => {
           const { id, title, field, classes, img } = work;
           return (
-            <div
-              key={id}
-              className="w-full flex flex-col items-center justify-center my-10 "
-            >
-              <img src={img} alt={title} className="w-[90%] h-70 rounded-lg " />
-              <div className="w-[95%] flex flex-col items-center justify-center my-2">
-                <div className="flex justify-between items-center w-[90%] ">
-                  <h5 className="text-2xl">{title}</h5>
-                  <p>{field}</p>
-                </div>
-                <hr className="w-[90%] my-2.5 " />
-                <div className="w-[90%] flex items-center justify-start ">
-                  {classes.map((workclass, i) => {
-                    return (
-                      <p
-                        key={i}
-                        className="mr-5 border text-center flex items-center justify-center h-10 w-fit px-5 rounded-xl"
-                      >
-                        {workclass}
-                      </p>
-                    );
-                  })}
+            <SlideSectionWork>
+              <div
+                key={id}
+                className={`w-full flex flex-col items-center justify-center my-10 ${
+                  id % 2 !== 0 ? "md:translate-y-20" : ""
+                }`}
+              >
+                <img
+                  src={img}
+                  alt={title}
+                  className="w-[90%] h-70 rounded-lg "
+                />
+                <div className="w-[95%] flex flex-col items-center justify-center my-2">
+                  <div className="flex justify-between items-center w-[90%] ">
+                    <h5 className="text-2xl">{title}</h5>
+                    <p>{field}</p>
+                  </div>
+                  <hr className="w-[90%] my-2.5 " />
+                  <div className="w-[90%] flex items-center justify-start ">
+                    {classes.map((workclass, i) => {
+                      return (
+                        <p
+                          key={i}
+                          className="mr-5 border text-center flex items-center justify-center h-10 w-fit px-5 rounded-xl"
+                        >
+                          {workclass}
+                        </p>
+                      );
+                    })}
+                  </div>
                 </div>
               </div>
-            </div>
+            </SlideSectionWork>
           );
         })}
       </div>
