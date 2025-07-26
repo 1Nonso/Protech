@@ -163,12 +163,18 @@ const About = () => {
             </div>
           ))}
         </ScrollFadeSwap>
-        <p className="mt-5 text-2xl text-center font-[borel] font-semibold relative bottom-10 md:bottom-30 ">
+        <motion.p
+          initial={{ opacity: 0, y: 100 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 1.2 }}
+          className="mt-5 text-2xl text-center font-[borel] font-semibold relative bottom-10 md:bottom-30 "
+        >
           <span className="block">we`re always on.</span>
           <span>
             our global team works round the clock, helping you stay ahead.
           </span>
-        </p>
+        </motion.p>
       </div>
     </section>
   );
