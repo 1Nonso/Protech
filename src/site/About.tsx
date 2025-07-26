@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import photoOfDesignerCybersecurity from "./../assets/images/echebiri.png";
 import photoOfAiEngineer from "./../assets/images/godswill.png";
 import photoOfBackendDeveloper from "./../assets/images/chisom.png";
-import photoOfFrontendDeveloper from "./../assets/images/othniel.jpg";
+import photoOfFrontendDeveloper from "./../assets/images/frontendDev.jpg";
 import photoOfDesigner from "./../assets/images/nicole.jpeg";
 
 const About = () => {
