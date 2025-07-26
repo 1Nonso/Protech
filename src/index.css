@@ -37,7 +37,7 @@ body {
   font-family: DynaPuff;
 }
 
-.homeBackgroundImage {
+.backgroundImage1 {
   background: url("../src/assets/images/homePageBackground.png");
   background-color: #0099ff;
   background-blend-mode: multiply;
@@ -47,8 +47,16 @@ body {
   background-clip: border-box;
 }
 
-.aboutBackgroundImage {
+.backgroundImage2 {
   background: url("../src/assets/images/blue-texture3.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  background-clip: border-box;
+}
+
+.backgroundImage3 {
+  background: url("../src/assets/images/blue-texture.jpg");
   background-repeat: no-repeat;
   background-position: top;
   background-size: cover;
