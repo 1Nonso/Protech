@@ -123,10 +123,19 @@ const About = () => {
             <h5 className="font-bold text-xl pt-10 text-center text-transparent  ">
               meet the team
             </h5>
-            <img
+            <motion.img
               src={niceImage}
               alt="drawing of a lightbulb "
-              className="w-10"
+              className="w-10 relative bottom-5.5 right-5.5"
+              animate={{
+                x: [0, 25, 25, 0, -25, -25, 0],
+                y: [0, 0, 25, 25, 25, 0, 0],
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 4,
+                ease: "linear",
+              }}
             />
           </div>
           <hr className="bg-[#0101bf] " />
