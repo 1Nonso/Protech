@@ -159,7 +159,7 @@ const About = () => {
         </ScrollFadeSwap>
         <p className="mt-5 text-2xl text-center font-[borel] font-semibold relative bottom-10 md:bottom-30 ">
           <span className="block">we`re always on.</span>
-          <span className="block">
+          <span>
             our global team works round the clock, helping you stay ahead.
           </span>
         </p>
