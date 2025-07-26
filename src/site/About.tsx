@@ -1,5 +1,6 @@
 import ScrollFadeSwap from "../components/scrollComponen";
 import sample from "./../assets/images/sample.png";
+import niceImage from "./../assets//images/aboutPage.webp";
 import { AnimatePresence, motion } from "framer-motion";
 import photoOfDesignerCybersecurity from "./../assets/images/echebiri.png";
 import photoOfAiEngineer from "./../assets/images/godswill.png";
@@ -117,11 +118,16 @@ const About = () => {
         </ol>
       </div>
       <div className="bg-white w-full px-5 relative">
-        <div className="">
-          <div className="bg-linear-to-r from-[#0099FF] to-[#0101bf] bg-clip-text w-fit ">
+        <div className="w-full">
+          <div className="bg-linear-to-r from-[#0099FF] to-[#0101bf] bg-clip-text flex justify-between items-center w-[97.5%] ">
             <h5 className="font-bold text-xl pt-10 text-center text-transparent  ">
               meet the team
             </h5>
+            <img
+              src={niceImage}
+              alt="drawing of a lightbulb "
+              className="w-10"
+            />
           </div>
           <hr className="bg-[#0101bf] " />
           <p className="mt-5 text-2xl text-center font-[borel] font-semibold ">
