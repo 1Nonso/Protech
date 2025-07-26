@@ -1,4 +1,4 @@
-import ScrollFadeSwap from "../components/scrollComponen";
+import { ScrollFadeSwap } from "../components/scrollComponen";
 import sample from "./../assets/images/sample.png";
 import niceImage from "./../assets//images/aboutPage.webp";
 import { AnimatePresence, motion } from "framer-motion";

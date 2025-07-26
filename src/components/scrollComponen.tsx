@@ -7,7 +7,7 @@ type Props = {
   children: React.ReactNode[];
 };
 
-const ScrollFadeSwap = ({ children }: Props) => {
+export const ScrollFadeSwap = ({ children }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({ target: containerRef });
 
@@ -40,5 +40,3 @@ const ScrollFadeSwap = ({ children }: Props) => {
     </div>
   );
 };
-
-export default ScrollFadeSwap;
