@@ -50,7 +50,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="w-dvw aboutBackgroundImage py-10 text-white flex flex-col items-center "
+      className="w-dvw backgroundImage2 py-10 text-white flex flex-col items-center "
     >
       <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-6 w-[95%] ">
         <p className="text-center text-lg font-medium">
