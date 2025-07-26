@@ -2,7 +2,7 @@ import servicesImage from "./../assets/images/servicesImage.webp";
 import brandImage from "./../assets/images/designImage.webp";
 import designImage from "./../assets/images/brandImage.webp";
 import webImage from "./../assets/images/webImage.webp";
-import { SlideSection } from "../components/scrollComponen";
+import { SlideSection } from "../components/scrollComponents";
 import { motion } from "framer-motion";
 
 const Services = () => {
