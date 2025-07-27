@@ -26,7 +26,7 @@ const About = () => {
     {
       name: "NWANEBUIKE CHISOM D.",
       role: "Backend Web-Developer",
-      desc: "...",
+      desc: "I am Nwanebike Chisom, a skilled Backend Developer with expertise in building robust server-side solutions. Proficient in crafting seamless integrations with MySQL and MongoDB, I leverage NextAuth for secure authentication. With a strong foundation in React and Next.js, I bridge the gap between frontend and backend, ensuring cohesive and scalable applications. My focus on clean, maintainable code and passion for solving complex problems drive me to deliver high-quality solutions. I'm excited to contribute my skills and growth mindset.",
       img: photoOfBackendDeveloper,
     },
     {
