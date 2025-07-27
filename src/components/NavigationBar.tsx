@@ -1,7 +1,7 @@
 "use client";
 
-import menuLogo from "../assets/Menu.svg";
-import closeMenuLogo from "../assets/CloseMenu.svg";
+import menuLogo from "../assets/images/Menu.svg";
+import closeMenuLogo from "../assets/images/CloseMenu.svg";
 import { HashLink as Link } from "react-router-hash-link";
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -95,8 +95,8 @@ const Menu = ({ setMenuState }: MenuProps) => {
   const links = [
     { id: 1, name: "Home", to: "#home" },
     { id: 2, name: "About", to: "#about" },
-    { id: 3, name: "Work", to: "#work" },
-    { id: 4, name: "Services", to: "#services" },
+    { id: 3, name: "Services", to: "#services" },
+    { id: 4, name: "Work", to: "#work" },
     { id: 5, name: "Contact", to: "#contact" },
   ];
 
@@ -107,7 +107,7 @@ const Menu = ({ setMenuState }: MenuProps) => {
       animate="open"
       exit="closed"
       variants={sidebarVariants}
-      className="fixed top-0 right-0 h-screen w-[80%] z-40 bg-[#0088FF] text-white p-6 flex flex-col items-center justify-center space-y-6 rounded-l-3xl"
+      className="fixed top-0 right-0 h-screen w-[80%] md:w-[40%] z-40 bg-[#0088FF] text-white p-6 flex flex-col items-center justify-center space-y-6 rounded-l-3xl"
     >
       <motion.img
         src={closeMenuLogo}

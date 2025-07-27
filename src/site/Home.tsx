@@ -27,7 +27,7 @@ const fadeInUp = {
 const Home = () => {
   return (
     <section id="home" className="w-dvw">
-      <div className="homeBackgroundImage h-dvh w-dvw fixed top-0 -z-10">
+      <div className="backgroundImage1 h-dvh w-dvw fixed top-0 -z-10">
         <motion.p
           className="absolute bottom-16 font-black text-white text-7xl text-center w-full"
           custom={0.5}
@@ -40,16 +40,17 @@ const Home = () => {
         </motion.p>
       </div>
       <div className="bg-gradient-to-b from-[#0099FF] from-40% to-[#ffff] to-55%">
-        <div className="relative min-h-fit mt-200 py-10 text-center flex flex-col md:flex-row-reverse items-center justify-evenly text-white w-dvw px-6 overflow-hidden">
+        <div className="relative min-h-fit mt-200 py-10 pt-30 text-center flex flex-col md:flex-row-reverse items-center justify-evenly text-white w-dvw px-6 overflow-hidden">
           <motion.p
             className="font-bold text-3xl md:text-5xl w-[90%] md:w-[60%]"
-            initial={{ opacity: 0, y: -200 }}
+            initial={{ opacity: 0, y: -100 }}
+            viewport={{ once: true }}
             whileInView={{
               opacity: 1,
               y: 0,
               transition: {
-                delay: 3,
-                duration: 1.5,
+                delay: 0.7,
+                duration: 1,
                 ease: easeInOut,
               },
             }}
@@ -64,12 +65,13 @@ const Home = () => {
           <motion.div
             className="md:w-[30%] flex flex-col md:flex-col-reverse items-center"
             initial={{ opacity: 0, y: 100 }}
-            animate={{
+            viewport={{ once: true }}
+            whileInView={{
               opacity: 1,
               y: 0,
               transition: {
-                delay: 1.5,
-                duration: 1.5,
+                delay: 0.7,
+                duration: 1,
                 ease: easeInOut,
               },
             }}
@@ -85,14 +87,19 @@ const Home = () => {
           </motion.div>
         </div>
         <motion.div
-          className="text-[#0099FF] w-full flex flex-col md:flex-row gap-8 p-8 md:p-12"
+          className=" w-full flex flex-col md:flex-row gap-8 p-8 mt-40 md:p-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 2.3 }}
           viewport={{ once: true, amount: 0.3 }}
         >
           <div className="w-full md:w-[40%]">
-            <h2 className="font-bold text-3xl mb-3">Our Approach</h2>
+            <div className="bg-linear-to-r from-[#0099FF] to-[#0101bf] bg-clip-text w-fit mb-5 ">
+              <h5 className="font-bold text-3xl pt-10 text-center text-transparent  ">
+                Our Approach
+              </h5>
+              {/* to-[#0101bf], from-[#ACB6E5] to-[#86FDE8] */}
+            </div>
             <p className="text-lg text-left max-w-xl">
               We won`t bore you with the details — we`ll just get it done. Fast,
               seamless, no drama.
@@ -113,16 +120,17 @@ const Home = () => {
             }}
           >
             {approachItems.map((item, idx) => (
-              <motion.li
-                key={idx}
-                className="relative"
-                variants={fadeInUp}
-                custom={0.2 * idx}
-              >
-                {idx + 1} {". "}
-                {item}
+              <div key={idx} className="relative">
+                <motion.li
+                  whileHover={{ x: 100 }}
+                  variants={fadeInUp}
+                  custom={0.2 * idx}
+                >
+                  {idx + 1} {". "}
+                  {item}
+                </motion.li>
                 <hr className="border-t border-[#0099FF] mt-3" />
-              </motion.li>
+              </div>
             ))}
           </motion.ol>
         </motion.div>
