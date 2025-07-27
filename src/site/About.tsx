@@ -18,12 +18,6 @@ const About = () => {
   ];
   const team = [
     {
-      name: "CHUKWUANI CHINONSO O.",
-      role: "Software Engineer | Web Development",
-      desc: "I'm a Web Developer with a strong foundation in React, TypeScript, and modern web technologies. I have hands-on experience building responsive, user-focused interfaces that combine technical precision with creative design. Through real-world projects, I've developed interactive UIs, dynamic dashboards, and seamless API integrations to enhance user experiences. My academic background in Computer Science, along with a consistent focus on writing clean, maintainable code, equips me to thrive in fast-paced development environments. I'm eager to contribute my energy, skills, and growth mindset to a forward-thinking team.",
-      img: photoOfFrontendDeveloper,
-    },
-    {
       name: "ECHEBIRI MUNACHIMSO",
       role: "UI/UX Designer | Ethical Hacker ",
       desc: "Hi, I'm Muna, a UI/UX Designer and Ethical Hacker passionate about crafting secure and user-centric digital experiences. I leverage Figma to design intuitive website and web app templates that prioritize both aesthetics and functionality. With a keen eye for detail, I infuse personality into my designs through thoughtful animations and seamless interactions. By combining my expertise in UI/UX I create amazing designs to fit to the client's choice and with ethical hacking principles and tools I'm able to detect vulnerability and threats in every web app or mobile app I create, which will ensure their security. I create digital solutions that are not only visually stunning but also secure and user-friendly.",
@@ -46,6 +40,12 @@ const About = () => {
       role: "UI/UX Designer",
       desc: "Hi, I`m Nicole — a UI/UX Designer who effortlessly brings ideas to life through clean, creative, and user-friendly designs. Using the software Figma, I design unique website and web app templates, always considering the user experience. I enjoy adding a bit of personality to every project through thoughtful animations and smooth interactions that make the design feel alive. Whether it`s sketching out wireframes or building high-fidelity prototypes, I`m all about creating digital experiences that are not just beautiful, but actually make sense to the people using them. I`m always learning, always creating, and always excited to design something that stands out and solves real problems.",
       img: photoOfDesigner,
+    },
+    {
+      name: "CHUKWUANI CHINONSO O.",
+      role: "Software Engineer | Web Development",
+      desc: "I'm a Web Developer with a strong foundation in React, TypeScript, and modern web technologies. I have hands-on experience building responsive, user-focused interfaces that combine technical precision with creative design. Through real-world projects, I've developed interactive UIs, dynamic dashboards, and seamless API integrations to enhance user experiences. My academic background in Computer Science, along with a consistent focus on writing clean, maintainable code, equips me to thrive in fast-paced development environments. I'm eager to contribute my energy, skills, and growth mindset to a forward-thinking team.",
+      img: photoOfFrontendDeveloper,
     },
   ];
 
