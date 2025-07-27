@@ -8,6 +8,7 @@ import Home from "./Home";
 import Services from "./Services";
 import Work from "./Work";
 import { WhatsappLink } from "../components/whatsapp";
+import Footer from "../components/footer";
 
 function App() {
   useEffect(() => {
@@ -51,6 +52,8 @@ function App() {
         <Work />
         <Contact />
       </main>
+
+      <Footer />
     </>
   );
 }
