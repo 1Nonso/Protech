@@ -18,7 +18,7 @@ const About = () => {
   ];
   const team = [
     {
-      name: "CHUKWUANI CHINONSO OTHNIEL",
+      name: "CHUKWUANI CHINONSO O.",
       role: "Software Engineer | Web Development",
       desc: "I'm a Web Developer with a strong foundation in React, TypeScript, and modern web technologies. I have hands-on experience building responsive, user-focused interfaces that combine technical precision with creative design. Through real-world projects, I've developed interactive UIs, dynamic dashboards, and seamless API integrations to enhance user experiences. My academic background in Computer Science, along with a consistent focus on writing clean, maintainable code, equips me to thrive in fast-paced development environments. I'm eager to contribute my energy, skills, and growth mindset to a forward-thinking team.",
       img: photoOfFrontendDeveloper,
