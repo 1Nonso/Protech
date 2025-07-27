@@ -2,7 +2,6 @@ const Footer = () => {
   return (
     <footer className="bg-[#0099FF] text-white px-6 md:px-20 py-12">
       <div className="flex flex-col md:flex-row justify-between gap-10">
-        {/* Logo & Tagline */}
         <div className="flex flex-col gap-3 max-w-sm">
           <img
             src="/protech-Logo.svg"
@@ -13,8 +12,6 @@ const Footer = () => {
             No Borders. No Delays. Only Creativity — On Demand 24/7.
           </p>
         </div>
-
-        {/* Links */}
         <div className="flex gap-16">
           <div className="flex flex-col gap-2">
             <h4 className="font-semibold text-xl mb-2">Explore</h4>
@@ -42,14 +39,15 @@ const Footer = () => {
             <a href="#" className="hover:underline">
               LinkedIn
             </a>
-            <a href="mailto:hello@protech.agency" className="hover:underline">
+            <a
+              href="mailto:protechnigltd6@gmail.com"
+              className="hover:underline"
+            >
               Email Us
             </a>
           </div>
         </div>
       </div>
-
-      {/* Bottom Note */}
       <div className="mt-10 text-sm text-center border-t border-white pt-6">
         © {new Date().getFullYear()} Protech Agency. All rights reserved.
       </div>
